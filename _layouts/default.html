@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+  {% include meta.html %}
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+  <link rel="shortcut icon" href="/images/ico/favicon.ico">
+  <link rel="icon" type="image/png" href="/images/ico/app-icon144x144@4x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/app-icon144x144@4x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/app-icon114x114@3x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/app-icon72x72@2x.png">
+  <link rel="apple-touch-icon-precomposed" href="/images/ico/app-icon57.png">
+
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":["Organization","Place","LocalBusiness"],"@id":"https://cualuoidanang.com/#localbusiness","name":"CửaLướiĐàNẵng.com","url":"https://cualuoidanang.com/","sameAs":["https://www.facebook.com/cualuoidanang/"],"logo":{"@type":"ImageObject","@id":"https://cualuoidanang.com/#logo","url":"https://cualuoidanang.com/images/logo.png","caption":"CửaLướiĐàNẵng.com"},"image":"https://cualuoidanang.com/images/logo.png","address":{"@type":"PostalAddress","streetAddress":"191 Cách Mạng Tháng Tám, Phường Khuê Trung, Cẩm Lệ","addressLocality":"Cẩm Lệ","addressRegion":"Đà Nẵng","postalCode":"550000","addressCountry":"VN"},"priceRange":"200.000₫ - 1.650.000₫","email":"trangtrinhasinhtai@gmail.com","telephone":"0976 88 00 20"},{"@type":"WebSite","@id":"https://cualuoidanang.com/#website","url":"https://cualuoidanang.com/","name":"Chuyên cung cấp cửa lưới chống muỗi tại Đà Nẵng 0976 88 00 20","publisher":{"@id":"https://cualuoidanang.com/#publisher"}},{"@type":"ProfilePage","@id":"https://cualuoidanang.com/#profilepage","url":"https://cualuoidanang.com/","inLanguage":"vi","name":"Chuyên cung cấp và thi công các sản phẩm Cửa Lưới chống muỗi-côn trùng công nghệ Nhật Bản, Màn rèm, Tranh dán tường 3D-5D-8D, Giấy dán tường, Vải dán tường, Giàn phơi thông minh,...","isPartOf":{"@id":"https://cualuoidanang.com/#ispartof"}},{"@type":["Person"],"@id":"https://cualuoidanang.com/#author","name":"Kinh doanh","image":{"@type":"ImageObject","@id":"https://cualuoidanang.com/#authorlogo","url":"https://cualuoidanang.com/","caption":"Kinh doanh"},"sameAs":[]},{"@type":"Place","@id":"https://cualuoidanang.com/#local-place","address":{"@type":"PostalAddress","@id":"https://cualuoidanang.com/#local-place-address","streetAddress":"191 Cách Mạng Tháng Tám, Phường Khuê Trung, Cẩm Lệ, Đà Nẵng","addressLocality":"Đà Nẵng","postalCode":"550000","addressRegion":"Đà Nẵng","addressCountry":""},"geo":{"@type":"GeoCoordinates","latitude":"15.9948519","longitude":"108.1983046"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:30","closes":"17:30"}],"telephone":"0976 88 00 20"}]}
+  </script>
+  {% if page.title %}
+    {% if page.categories %}
+  <script type="application/ld+json">
+    {"@context":"https://schema.org/","@type":"BreadcrumbList","@id":"https://cualuoidanang.com/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"{{ page.url }}#category","url":"https://cualuoidanang.com{{ page.url }}","name":"{{ page.categories | join: ', ' }}"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"{{ page.url }}","url":"https://cualuoidanang.com{{ page.url }}","name":"{{ page.title }}"}}]}
+  </script>
+    {% else %}
+  <script type="application/ld+json">
+    {"@context":"https://schema.org/","@type":"BreadcrumbList","@id":"https://cualuoidanang.com/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"{{ page.url }}","url":"https://cualuoidanang.com{{ page.url }}","name":"{{ page.title }}"}}]}
+  </script>
+    {% endif %}
+  {% else %}
+  <script type="application/ld+json">
+    {"@context": "https://schema.org/","@type":"BreadcrumbList","@id":"https://cualuoidanang.com/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://cualuoidanang.com/#breadcrumlist1","url":"https://cualuoidanang.com/","name":"Cửa lưới chống muỗi"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://cualuoidanang.com/man-rem/#breadcrumlist2","url":"https://cualuoidanang.com/man-rem","name":"Màn rèm"}}]}
+  </script>
+  {% endif %}
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PHMD6Q8');</script>
+  <!-- End Google Tag Manager -->
+  
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 overflow">
+          <div class="social-icons pull-right">
+            <ul class="nav nav-pills">
+              <li><a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i>0976 88 00 20</a></li>
+              <li><a href="tel:0938564785"><i class="fa fa-phone"></i>0938 564 785</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/">
+            <h1><img src="/images/logo.svg" alt="logo"></h1>
+          </a>
+
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li {% if page.url == "/" %} class="active" {% endif %}><a href="/">Home</a></li>
+            <li class="dropdown{% if page.url contains 'cua-luoi-chong-muoi' %} active{% endif %}"><a href="javascript:;" class="toggle">Cửa lưới chống muỗi <i class="fa fa-angle-down"></i></a>
+              <ul role="menu" class="sub-menu">
+                <li{% if page.url == '/cua-luoi-chong-muoi-dang-xep/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-dang-xep/">Cửa lưới dạng xếp</a></li>
+                <li{% if page.url == '/cua-luoi-chong-muoi-dang-cuon/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-dang-cuon/">Cửa lưới dạng cuốn</a></li>
+                <li{% if page.url == '/cua-luoi-chong-muoi-dang-lua/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-dang-lua/">Cửa lưới dạng lùa</a></li>
+                <li{% if page.url == '/cua-luoi-chong-muoi-dang-co-dinh/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-dang-co-dinh/">Cửa lưới cố định</a></li>
+                <li style="margin-top:5px;padding-left:5px;"><strong>Cao cấp</strong></li>
+                <li{% if page.url == '/cua-luoi-chong-muoi-xep-xich-ghep-canh/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-xep-xich-ghep-canh/">Cửa lưới xếp xích ghép cánh</a></li>
+                <li{% if page.url == '/cua-luoi-chong-muoi-khong-ray/' %} class="active" {% endif %}><a href="/cua-luoi-chong-muoi-khong-ray/">Cửa lưới xếp không ray</a></li>
+                <li{% if page.url == '/cua-luoi-an-toan-chong-muoi-he-mo-quay/' %} class="active" {% endif %}><a href="/cua-luoi-an-toan-chong-muoi-he-mo-quay/">Cửa lưới an toàn hệ mở quay</a></li>
+                <li{% if page.url == '/cua-luoi-an-toan-chong-muoi-he-lua/' %} class="active" {% endif %}><a href="/cua-luoi-an-toan-chong-muoi-he-lua/">Cửa lưới an toàn hệ lùa</a></li>
+              </ul>
+            </li>
+            <li class="dropdown{% if page.url contains 'man-' %} active {% endif %}"><a href="javascript:;" class="toggle">Màn rèm <i class="fa fa-angle-down"></i></a>
+              <ul role="menu" class="sub-menu">
+                <li{% if page.url == '/man-rem-vai/' %} class="active" {% endif %}><a href="/man-rem-vai/">Màn vải</a></li>
+                <li{% if page.url == '/man-cuon/' %} class="active" {% endif %}><a href="/man-cuon/">Màn cuộn</a></li>
+                <li{% if page.url == '/man-cau-vong/' %} class="active" {% endif %}><a href="/man-cau-vong/">Màn cầu vồng</a></li>
+                <li{% if page.url == '/man-sao/' %} class="active" {% endif %}><a href="/man-sao/">Màn sáo</a></li>
+              </ul>
+            </li>
+            <li><a href="https://tranhpro.com">Tranh Dán Tường</a></li>
+            <li class="dropdown{% if page.url == '/giay-dan-tuong/' or page.url == '/vai-dan-tuong/' or page.url == '/gian-phoi-thong-minh/' %} active {% endif %}"><a href="javascript:;" class="toggle">Khác <i class="fa fa-angle-down"></i></a>
+              <ul role="menu" class="sub-menu">
+                <li{% if page.url == '/giay-dan-tuong/' %} class="active" {% endif %}><a href="/giay-dan-tuong/">Giấy dán tường</a></li>
+                <li{% if page.url == '/vai-dan-tuong/' %} class="active" {% endif %}><a href="/vai-dan-tuong/">Vải dán tường</a></li>
+                <li{% if page.url == '/gian-phoi-thong-minh/' %} class="active" {% endif %}><a href="/gian-phoi-thong-minh/">Giàn phơi thông minh</a></li>
+              </ul>
+            </li>
+            <li{% if page.url == '/about/' %} class="active" {% endif %}><a href="/about/">Giới thiệu</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{ content }}
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center bottom-separator">
+          <img src="/images/home/under.png" class="img-responsive inline" alt="">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="testimonial bottom">
+            <h2>Từ Khách Hàng</h2>
+            <div class="media">
+              <div class="pull-left">
+                <img src="/images/home/profile1.png" alt="Khách hàng">
+              </div>
+              <div class="media-body">
+                <blockquote>Tư vấn tận tình, chuyên nghiệp và vui vẻ. Sản phẩm cũng rất tốt.</blockquote>
+                <h3>- Chú Khoan</h3>
+              </div>
+            </div>
+            <div class="media">
+              <div class="pull-left">
+                <img src="/images/home/profile2.png" alt="Khách hàng">
+              </div>
+              <div class="media-body">
+                <blockquote>Anh em thợ thi công chắc chắn, sạch sẽ và gọn gàng. Có sự cố gì gọi cho thợ đến liền. 5*
+                </blockquote>
+                <h3>- Cô Hồng</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="contact-info bottom">
+            <h2>Liên hệ</h2>
+            <address>
+              E-mail: <a href="mailto:trangtrinhasinhtai@gmail.com">trangtrinhasinhtai@gmail.com</a> <br>
+              Viettel: <a href="tel:0976880020">0976 88 00 20</a> (<a href="https://zalo.me/0976880020">Zalo</a>) <br>
+              Mobile: <a href="tel:0938564785">0938 564 785</a><br>{% include svg-icons.html %}
+            </address>
+
+            <h2>Địa chỉ</h2>
+            <a href="https://goo.gl/maps/mE15z3vmVPenDthX7">
+              <address>
+                191 Cách Mạng Tháng Tám <br>
+              Khuê Trung, Cẩm Lệ <br>
+              TP Đà Nẵng <br>
+              </address>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="contact-form bottom">
+            <h2>Hãy Gọi lại cho tôi</h2>
+            <form id="main-contact-form" name="contact-form" method="post" action="">
+              <div class="form-group">
+                <input type="text" name="name" id="name" class="form-control" required="required" placeholder="Tên Anh/Chị">
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" id="phone" class="form-control" required="required" placeholder="Điện thoại">
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" required="required" class="form-control" rows="8"
+                  placeholder="Ghi chú"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" name="submit" class="btn btn-submit" value="Gửi" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="copyright-text text-center">
+            <p>&copy; {{ site.name }} 2019. All Rights Reserved.</p>
+            <p>Designed by <a target="_blank" href="https://huuthanhdtd.com">IIOT Dev</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/wow.min.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  {% if site.tawk_to %}
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5b3c47ec6d961556373d6290/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  {% endif %}
+  {% include analytics.html %}
+</body>
+
+</html>

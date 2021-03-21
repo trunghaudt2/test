@@ -1,0 +1,107 @@
+---
+layout: default
+---
+<section id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="main-slider">
+                <div class="slide-text">
+                    <h1>Trang Trí Nội Thất Sinh Tài</h1>
+                    <p>Chuyên cung cấp và thi công các sản phẩm <a href="/">Cửa Lưới chống muỗi-côn trùng</a> công nghệ Nhật Bản, <a href="/man-rem/">Màn rèm</a>, <a href="https://tranhpro.com">Tranh dán tường 3D-5D-8D</a>, <a href="/giay-dan-tuong/">Giấy dán tường</a>, <a href="/vai-dan-tuong/">Vải dán tường</a>, <a href="/gian-phoi-thong-minh/">Giàn phơi thông minh</a>,...</p>
+                    <a href="tel:0976880020" class="btn btn-common">GỌI NGAY: 0976880020</a>
+                </div>
+                <img src="/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                <img src="/images/home/slider/house.png" class="slider-house" alt="slider image">
+                <img src="/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                <img src="/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                <img src="/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+            </div>
+        </div>
+    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+</section>
+<!--/#home-slider-->
+
+{% for category in site.categories %}
+ <section id="recent-{{ category[0] | slugify: 'latin' }}" class="recent-projects">
+    <div class="container">
+        <div class="row">
+            <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">{{ category[0] }}</h1>
+            <p class="text-center padding-bottom wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms">Một số sản phẩm {{ category[0] }} tiêu biểu</p>
+            {% for post in category[1] limit:4 %}
+            <div class="col-sm-3 wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="portfolio-wrapper">   
+                    <div class="portfolio-single">
+                        <div class="portfolio-thumb">
+                            <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.thumb }}" class="img-responsive" alt="{{ post.title }}"></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                        <p class="text-primary price">{{ post.priceText }}</p>
+                        {{ post.excerpt }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--/#recent-category-->
+{% endfor %}
+
+<section id="action" class="responsive">
+    <div class="vertical-center">
+         <div class="container">
+            <div class="row">
+                <div class="action take-tour">
+                    <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h1 class="title">Hãy liên hệ ngay với chúng tôi</h1>
+                        <p>Để được tư vấn tận tình &amp; chi tiết nhất.</p>
+                    </div>
+                    <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="tour-button">
+                            <a href="tel:0976880020" class="btn btn-common">0976.88.00.20</a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="/images/home/icon1.png" alt="">
+                    </div>
+                    <h2>SẢN PHẨM ĐA DẠNG</h2>
+                    <p>Nhiều lựa chọn mẫu mã, tự cuốn, xếp, cố định…. và màu sắc theo kiến trúc ngôi nhà bạn.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <img src="/images/home/icon2.png" alt="">
+                    </div>
+                    <h2>THẨM MỸ KIẾN TRÚC</h2>
+                    <p>Cửa lưới, rèm cửa hoà hợp và không làm ảnh hưởng tới kiến trúc sẵn có ban đầu của ngôi nhà.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <img src="/images/home/icon3.png" alt="">
+                    </div>
+                    <h2>BẢO HÀNH</h2>
+                    <p>{{ site.name }} cam kết sản phẩm chính hãng, bảo hành sản phẩm trong vòng 12 tháng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#services-->
